@@ -14,10 +14,10 @@ Esta plantilla de AWS CloudFormation crea una instancia EC2 con la configuració
 
 Puedes utilizar los siguientes scripts para interactuar con CloudFormation y gestionar tus recursos de AWS de forma automatizada:
 
-### Script de Despliegue (`crearStack.sh`)
+### Script de creación (`crearStack.sh`)
 
 Este script de shell se utiliza para desplegar una pila de AWS CloudFormation llamada "stack_actividad_4", utilizando la plantilla definida en el archivo "main.yml".
 
-### Script de Eliminación (`borraStack.sh`)
+### Script de eliminación (`borraStack.sh`)
 
 Este script localiza la pila de CloudFormation con el nombre "stack_actividad_4" y la elimina utilizando la AWS CLI. 
