@@ -187,6 +187,20 @@ Resources:
             systemctl enable tomcat
             ufw allow 8080
 
+          # Instalamos Git 
+          apt install git -y 
+          #Vamos a clonar el GitHub e instalarlo dónde queramos
+          directory=/home/ubuntu/holamundo
+          git clone https://github.com/DanPV1/Despliegue/tree/main/holamundo $directory
+          #Cambiamos el directorio
+          cd /home/ubuntu/holamundo
+          #Hacemos que sea ejecutable 
+          chmod +x gradlew
+          #Compilamos la aplicación 
+          ./gradlew war
+          #Cambiamos de directorio la aplicación compilada 
+          mv /build/libs/HolaMundo.war /opt/tomcat/webapps
+          
           # Esta tiene que serla ultima instrucción
           /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource EC2Instance --region ${AWS::Region}
       Tags:
