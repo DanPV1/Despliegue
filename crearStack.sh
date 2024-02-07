@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Nombramos el stack
-STACK_NAME=stack_actividad_4
+STACK_NAME=stack-actividad-4
 
 # Ruta del archivo de la plantilla
 TEMPLATE_FILE=main.yml
